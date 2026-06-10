@@ -57,13 +57,13 @@ Accepted as an OMA3 standards effort. The specification is undergoing active rev
 ## Links
 
 - **Website:** [omatrust.org](https://omatrust.org)
-- **Specification:** [github.com/oma3dao/omatrust-docs](https://github.com/oma3dao/omatrust-docs)
+- **Draft specification:** [github.com/oma3dao/omatrust-docs](https://github.com/oma3dao/omatrust-docs)
 
 ## What Members Get
 
 - Working group participation and voting rights on the standard
 - Early access to testnet, contracts, and integration support
-- OMA token grants for contributions to the standard and its implementations
+- Contributor recognition under OMA3 governance processes ([details](./README.md#why-contribute))
 
 ---
 

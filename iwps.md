@@ -51,7 +51,7 @@ Approved OMA3 standard. [Base specification](https://github.com/oma3dao/iwps-spe
 ## What Members Get
 
 - Working group participation and voting rights on extension frameworks and specification changes 
-- OMA token grants for contributions to the standard and its implementations
+- Contributor recognition under OMA3 governance processes ([details](./README.md#why-contribute))
 
 ---
 

@@ -12,7 +12,7 @@ Approved OMA3 standards track. Initial implementations available. Specification 
 
 - Working group participation and influence on the standard
 - Implementation repository access as work progresses
-- OMA token grants for contributions to the standard and its implementations
+- Contributor recognition under OMA3 governance processes ([details](./README.md#why-contribute))
 
 ---
 

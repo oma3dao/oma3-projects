@@ -24,7 +24,7 @@ But this capability is locked inside blockchain transaction signing. There's no 
 
 OAuth — the most widely used authorization standard — still gives a single principal unilateral credentials. Applications that want multi-approval must build and maintain their own custom systems.
 
-## MPAS: Multi-Sig for Everything
+## MPAS: Multi-Party Authorization for Any Action
 
 The Multi-Party Action Standard generalizes the multi-sig primitive: **propose → collect approvals → verify threshold → execute**. It works for any action in any system — API calls, deployments, database operations, agent tool use, payments, infrastructure changes.
 
@@ -33,18 +33,17 @@ Key properties:
 - **Cryptographic proof of each approval** — signed, verifiable, auditable
 - **Rich policy model** — far beyond simple M-of-N thresholds (see below)
 - **Protocol-neutral** — works across Web2, Web3, AI agents, cloud, and local applications
-- **Portable** — works across applications without custom integration per app
+- **Portable approval artifacts** — applications and adapters use a common approval package rather than inventing custom approval flows
 - **Selective enforcement** — only the actions you choose require approvals
 
 ## Policy: More Than Thresholds
 
-MPAS policies go well beyond "3 of 5 approve." The policy model supports:
+MPAS policies go well beyond "3 of 5 approve." The current draft supports:
 
 - **Role-based requirements** — require at least one human signer, or at least one signer from a specific team
 - **Signer class diversity** — require approvals from both humans and agents, or from multiple organizations
 - **Super-admin overrides** — designated principals can authorize actions unilaterally for emergency scenarios
 - **Action-level granularity** — different actions have different policies (e.g., read = no approval, delete = 2 humans + 1 agent)
-- **Time-based constraints** — approvals that expire, cooling-off periods before execution
 - **Contextual conditions** — policies that vary based on the action's parameters, target system, or risk level
 
 This means organizations can model their actual governance — not just a flat vote, but the nuanced decision-making structures they already use.
@@ -74,9 +73,16 @@ MPAS can be integrated natively into applications. But for immediate adoption, a
 - Holds the real credentials (API keys, tokens, signing keys)
 - Receives MPAS-verified action packages
 - Only releases credentials or executes when policy is satisfied
-- Existing applications work unchanged
 
-This means any existing system can be governed by MPAS today — without the application knowing about MPAS at all. No vendor integration required.
+No change to the downstream application is required when a trusted Credential Adapter can safely translate and execute the approved action. This means existing systems can be governed by MPAS today — the application doesn't need to know about MPAS at all.
+
+## Relationship to Other Standards
+
+**OMATrust** answers: *should this service or signer be trusted?* Reputation and attestations for MPAS components — signers, verifiers, coordination servers — live on OMATrust, so participants can verify trustworthiness before including them in approval workflows.
+
+**x402** handles: *payment negotiation and proof.* When an action involves a payment, x402 negotiates the economic terms; MPAS governs whether the agent or user is authorized to perform that action in the first place.
+
+**Agent runtime hooks** (e.g., tool-use interception in agent frameworks) can identify *where* a runtime should pause or evaluate an event. MPAS defines the cryptographic approval package and verification process for the *specific action* at that pause point.
 
 ## Use Cases
 
@@ -98,7 +104,7 @@ Future execution profiles planned: OpenAPI operations, EVM transaction intents, 
 
 ## Links
 
-- **Specification:** [github.com/oma3dao/mpas-docs](https://github.com/oma3dao/mpas-docs)
+- **Draft specification:** [github.com/oma3dao/mpas-docs](https://github.com/oma3dao/mpas-docs) (private — member access only)
 
 ## What Members Get
 
@@ -106,7 +112,7 @@ Future execution profiles planned: OpenAPI operations, EVM transaction intents, 
 - Implementation repository access (SDK, reference implementations)
 - Working group participation and voting rights on the standard
 - Early access to reference implementations and integration support
-- OMA token grants for contributions to the standard and its implementations
+- Contributor recognition under OMA3 governance processes ([details](./README.md#why-contribute))
 
 ---
 
