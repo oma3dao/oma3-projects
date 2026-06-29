@@ -102,16 +102,17 @@ Proposed standardization track. Initial technical design and draft specification
 
 Future execution profiles planned: OpenAPI operations, EVM transaction intents, GraphQL operations, HTTP requests, CLI commands.
 
-## Links
+## Links (private — member access only for now)
 
-- **Draft specification:** [github.com/oma3dao/mpas-docs](https://github.com/oma3dao/mpas-docs) (private — member access only)
+- **Canonical repository:** [github.com/oma3dao/mpas](https://github.com/oma3dao/mpas) — specifications, SDK, example implementation, application registry, and conformance tools
+- **Draft specification:** [github.com/oma3dao/mpas/specs](https://github.com/oma3dao/mpas/tree/main/specs)
 
 ## What Members Get
 
 - Full normative draft specifications (MPAS Core, HTTP Profile, Application Plugin Profile, Policy Profile)
-- Implementation repository access (SDK, reference implementations)
+- Canonical repository access (SDK, example implementation, conformance tools)
 - Working group participation and voting rights on the standard
-- Early access to reference implementations and integration support
+- Early access to implementations and integration support
 - Contributor recognition under OMA3 governance processes ([details](./README.md#why-contribute))
 
 ---
